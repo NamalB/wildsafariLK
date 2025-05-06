@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Safari Tours Sri Lanka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact-form-section {
+      padding: 2rem;
+      background-color: #fff;
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .contact-form-section h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      margin: 0.8rem 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .submit-btn {
+      background-color: #2980b9;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .submit-btn:hover {
+      background-color: #1abc9c;
+    }
+
+    .contact-info {
+      background-color: #ecf0f1;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .contact-info h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      margin: 0.3rem 0;
+    }
+
+    #map {
+      height: 400px;
+      margin: 2rem auto;
+      max-width: 800px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form-section {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Safari Tours</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-form-section">
+    <h2>Get in Touch with Us</h2>
+    <form>
+      <input type="text" class="form-input" placeholder="Your Name" required />
+      <input type="email" class="form-input" placeholder="Your Email" required />
+      <textarea class="form-input" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+   <div id="map"></div>
+
+   <div class="contact-info">
+    <h3>Contact Information</h3>
+    <p><strong>Address:</strong> No. 42, Safari Lane, Yala Road, Tissamaharama, Sri Lanka</p>
+    <p><strong>Email:</strong> info@safaritours.lk</p>
+    <p><strong>Phone:</strong> +94 71 234 5678 / +94 77 987 6543</p>
+    <p><strong>Opening Hours:</strong> Monday – Sunday: 7:00 AM – 8:00 PM</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Safari Tours Sri Lanka. All rights reserved.</p>
+  </footer>
+
+  <script>
+     function initMap() {
+      const location = { lat: 6.3108, lng: 81.3131 }; // Example coordinates, replace with actual
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: location,
+      });
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "Safari Tours Sri Lanka",
+      });
+    }
+  </script>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap&v=weekly"
+    async
+  ></script>
+</body>
+</html>
